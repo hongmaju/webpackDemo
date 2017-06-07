@@ -4,5 +4,15 @@ module.exports={
 	output:{
 		path:__dirname+'/dist/js',//打包后输出目录
 		filename:'bundle.js'//打包后输出的文件
+	},
+	module:{
+		loaders:[
+			{
+			 test:/\.json$/,// 匹配loaders所处理的文件的拓展名的正则表达式
+			 loader:"json"
+			}
+		]
 	}
 }
+
+
